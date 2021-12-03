@@ -10,9 +10,9 @@ Voy a crear una branch para cada ejercicio con su correspondiente day.
 
 ### Day 1
 
-_Considera una lista/array de ovejas. Cada oveja tiene un nombre y un color. Haz una función que devuelva una lista con todas las ovejas que sean de color rojo y que además su nombre contenga tanto las letras n Y a, sin importar el orden, las mayúsculas o espacios.
+_Considera una lista/array de ovejas. Cada oveja tiene un nombre y un color. Haz una función que devuelva una lista con todas las ovejas que sean de color rojo y que además su nombre contenga tanto las letras n Y a, sin importar el orden, las mayúsculas o espacios._
 
-Por ejemplo, si tenemos las ovejas:_
+_Por ejemplo, si tenemos las ovejas:_
 
 ```
 const ovejas = [
