@@ -8,29 +8,33 @@ _Repo con los desafios de adventJs_
 Voy a crear una branch para cada ejercicio con su correspondiente day.
 ```
 
-### Day 1
+### Day 2
 
-_Considera una lista/array de ovejas. Cada oveja tiene un nombre y un color. Haz una función que devuelva una lista con todas las ovejas que sean de color rojo y que además su nombre contenga tanto las letras n Y a, sin importar el orden, las mayúsculas o espacios.
+_Te ha llegado una carta ✉️ con todos los regalos que debes preparar. El tema es que es una cadena de texto y es muy difícil de leer 😱. ¡Menos mal que han puesto cada regalo separado por espacio! (aunque ten cuidado, porque al ser niños, igual han colado más espacios de la cuenta)
 
-Por ejemplo, si tenemos las ovejas:_
+Encima nos hemos dado cuenta que algunas palabras vienen con un _ delante de la palabra, por ejemplo _playstation, que significa que está tachado y no se tiene que contar.
+
+Transforma el texto a un objeto que contenga el nombre de cada regalo y las veces que aparece. Por ejemplo, si tenemos el texto:_
 
 ```
-const ovejas = [
-  { name: 'Noa', color: 'azul' },
-  { name: 'Euge', color: 'rojo' },
-  { name: 'Navidad', color: 'rojo' },
-  { name: 'Ki Na Ma', color: 'rojo'}
-]
+const carta = 'bici coche balón _playstation bici coche peluche'
 ```
 _Al ejecutar el método debería devolver lo siguiente:_
 
 ```
-const ovejasFiltradas = contarOvejas(ovejas)
+const regalos = listGifts(carta)
 
-console.log(ovejasFiltradas)
-
-// [{ name: 'Navidad', color: 'rojo' },
-//  { name: 'Ki Na Ma', color: 'rojo' }]
+console.log(regalos)
+/*
+{
+  bici: 2,
+  coche: 2,
+  balón: 1,
+  peluche: 1
+}
+*/
 ```
 
-_Estuvo divertidisimo 🤓_
+_Ten en cuenta que los tests pueden ser más exhaustivos... 😝 ¡Cuidado con contar espacios vacíos!
+
+Estuvo divertidisimo 🤓_
