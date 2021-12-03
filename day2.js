@@ -4,15 +4,16 @@ const carta = 'bici coche balon _playstation bici coche peluche coche'
 
 function listGifts(letter) {
 //Lo primero que hago es eliminar los espacios de la carta. Luego separo las palabras por una coma y los ordeno alfabéticamente..
-    let arr = letter.split(' ').join().split(',').sort();
-  
+  let arr = letter.trim().split(/[\s,]+/gi).join().split(',')  
 //Como bien dice el enunciado algunos niños escriben mal sus cartas, por lo que en las siguientes lineas lo que hago es eliminar todas las palabras mal escritas siguiendo el enunciado.
     for(let i = 0; i < arr.length; i++){
-        if(arr[i].includes('_')){
+        if(arr[i].startsWith('_')){
             arr.splice(i, 1);
         }
+        if(arr[i].includes('_')){
+             arr.splice(i, 1);           
+        }
     }
-  
 //Ahora bien, hay que sacar los juguetes redundantes.
     let sinRep = arr.filter((toy, i) => i == 0 ? true : arr[i-1] != toy);
   
